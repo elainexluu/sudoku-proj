@@ -41,7 +41,12 @@ def print_board(board):
 
 # a function that finds an empty entity
 # returns the position of the empty spot
-# def is_empty(board):
+def is_empty(board):
+    for row in range(len(board)):
+        for col in range(len(board)):
+            if board[row][col] == 0: # zero indicates that it is empty
+                return (row, col)
+    return None    
 
 # a function that validates the number
     # validating: checks to see if the number already exists in the grid or not
